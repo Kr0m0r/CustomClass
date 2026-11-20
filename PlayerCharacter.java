@@ -13,6 +13,8 @@ public class PlayerCharacter {
    private boolean alive;
    
    // constructors
+   
+      // default character
    public PlayerCharacter() {
       name = "Joe";
       playerClass = "Mage";
@@ -26,6 +28,22 @@ public class PlayerCharacter {
       alive = true;
    }
    
+      // new character
+   public PlayerCharacter(String name, String playerClass) {
+      this.name = name;
+      this.playerClass = playerClass;
+      level = 1;
+      currentXp = 0;
+      xpToNextLevel = 10;
+      health = 10.0;
+      attackPower = 2.0;
+      critChance = 0.02;
+      critBonus = 1.5;
+      alive = true;
+   }
+   
+   
+      // fully imported character
    public PlayerCharacter(String name, 
                           String playerClass, 
                           int level, 
@@ -44,6 +62,7 @@ public class PlayerCharacter {
       this.health = health;
       this.attackPower = attackPower;
       this.critChance = critChance;
+      this.critBonus = critBonus;
       this.alive = alive;
    }
    
